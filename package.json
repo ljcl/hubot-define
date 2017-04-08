@@ -1,0 +1,45 @@
+{
+  "name": "hubot-define",
+  "version": "1.0.0",
+  "description": "Get AFL scores from your hubot",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Luke Clark",
+    "email": "luke@lukeclark.com.au"
+  },
+  "repository": "https://github.com/ljcl/hubot-define.git",
+  "keywords": [
+    "hubot-script",
+    "wordnik",
+    "dictionary",
+    "define"
+  ],
+  "scripts": {
+    "build": "npm run clean && babel src -d dist --ignore **/*.spec.js,__mocks__",
+    "watch": "babel src --watch -d dist --ignore **/*.spec.js,__mocks__",
+    "prepublish": "npm run build",
+    "clean": "del dist docs",
+    "lint": "eslint src/**/*.js",
+    "docs": "mkdir -p docs && jsdoc2md src/**/*.js > docs/index.md",
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.24.0",
+    "babel-jest": "^19.0.0",
+    "babel-plugin-add-header-comment": "^1.0.3",
+    "babel-preset-es2015": "^6.1.18",
+    "del-cli": "^0.2.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-import": "^2.2.0",
+    "fetch-mock": "^5.9.4",
+    "jest": "^19.0.2",
+    "jsdoc-to-markdown": "^3.0.0"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "no-console": [
+    "error",
+      {
+        "allow": ["warn", "error"]
+      }
+    ]
+  },
+  "globals": {
+    "fetch": true
+  },
+  "env": {
+    "node": true,
+    "jest": true
+  }
+}
