@@ -1,0 +1,20 @@
+Description:
+  Dictionary definitions with the Wordnik API.
+
+Dependencies:
+  None
+
+Configuration:
+  WORDNIK_API_KEY
+
+Commands:
+  hubot define <word> - Grabs a dictionary definition of a word.
+
+Notes:
+  You'll need an API key from http://developer.wordnik.com/
+  This is a stripped down version of the original wordnik.coffee script.
+
+Author:
+  Aupajo
+  markpasc
+  ljcl

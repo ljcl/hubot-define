@@ -1,0 +1,11 @@
+node_modules
+src
+test
+docs
+tmp
+coverage
+npm-debug.log
+.travis.yml
+.babelrc
+.editorconfig
+.gitignore
