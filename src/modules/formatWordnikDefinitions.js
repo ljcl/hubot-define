@@ -1,6 +1,14 @@
 /**
- * Convert a provided round number and year into an AFL code
- */
+ * @typedef formatWordnikDefinitions
+ * @property {reply} * Message response to send to channel/user
+*/
+
+/**
+ * Fetch resources from the wordnik api
+ * @param  {string} word The searched for on wordnik
+ * @param  {string[]} json The json response from {@link fetchWordnikResource}
+ * @return {Promise<formatWordnikDefinitions>} A promise to the formatted response
+*/
 function formatWordnikDefinitions(word, json = []) {
   return new Promise((resolve) => {
     if (json.length === 0) {

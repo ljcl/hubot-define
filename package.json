@@ -19,9 +19,9 @@
     "build": "npm run clean && babel src -d dist --ignore **/*.spec.js,__mocks__",
     "watch": "babel src --watch -d dist --ignore **/*.spec.js,__mocks__",
     "prepublish": "npm run build",
-    "clean": "del dist",
+    "clean": "del dist docs",
     "lint": "eslint src/**/*.js",
-    "docs": "jsdoc src/**/*.js -d docs",
+    "docs": "mkdir -p docs && jsdoc2md src/**/*.js > docs/index.md",
     "test": "jest --coverage"
   },
   "devDependencies": {
@@ -37,7 +37,7 @@
     "eslint-plugin-import": "^2.2.0",
     "fetch-mock": "^5.9.4",
     "jest": "^19.0.2",
-    "jsdoc": "^3.4.3"
+    "jsdoc-to-markdown": "^3.0.0"
   },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1"
